@@ -66,7 +66,10 @@ worksheet = workbook.worksheets[0]
     end
     pdf.text "Total (von 10 Punkten)", style: :bold
     pdf.text (row[start_index + 2 * topic[:count] + 1].value).to_s, align: :right
-    pdf.move_down 50
+    if idx < topic.count
+      pdf.start_new_page
+      pdf.move_down 80
+    end
   end
 
   pdf.encrypt_document(user_password: pw, owner_password: pw)
