@@ -17,3 +17,6 @@ Those columns are followed by the actual topics, of which there can be any numbe
 * The last column is the total number of points
 
 To generate the PDF, run the `app.rb` file. This will create a PDF for each line in the `output` folder, each file protected by the password from column 3.
+
+![](doc/excel.png)
+![](doc/pdf.png)
